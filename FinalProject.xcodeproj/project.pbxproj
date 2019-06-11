@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1BDB054107439ABCB1FEE7CA /* Pods_FinalProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58BDF3151C05A422FC641BC /* Pods_FinalProjectTests.framework */; };
+		706F710B22AEC7AD0015169F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706F710A22AEC7AD0015169F /* ProfileViewController.swift */; };
+		706F710D22AEC99B0015169F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706F710C22AEC99A0015169F /* Assets.xcassets */; };
+		706F711022AF50DD0015169F /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706F710F22AF50DD0015169F /* Detail.storyboard */; };
 		70AE450722A5903600271CDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE450622A5903600271CDD /* AppDelegate.swift */; };
 		70AE450F22A5903600271CDD /* FinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70AE450D22A5903600271CDD /* FinalProject.xcdatamodeld */; };
-		70AE451122A5903A00271CDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70AE451022A5903A00271CDD /* Assets.xcassets */; };
 		70AE451422A5903A00271CDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70AE451222A5903A00271CDD /* LaunchScreen.storyboard */; };
 		70AE451F22A5903A00271CDD /* FinalProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE451E22A5903A00271CDD /* FinalProjectTests.swift */; };
 		70AE452D22A5908000271CDD /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE452922A5908000271CDD /* House.swift */; };
@@ -28,6 +30,9 @@
 		70AE456F22A8257B00271CDD /* SpellsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE456E22A8257B00271CDD /* SpellsViewController.swift */; };
 		70AE457222A82CBE00271CDD /* SpellTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE457022A82CBE00271CDD /* SpellTableCell.swift */; };
 		70AE457322A82CBE00271CDD /* SpellTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70AE457122A82CBE00271CDD /* SpellTableCell.xib */; };
+		70B9F44722ACD7180070A498 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B9F44622ACD7180070A498 /* UserSettings.swift */; };
+		70B9F44B22AD983D0070A498 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B9F44A22AD983D0070A498 /* RegisterViewController.swift */; };
+		70B9F44D22ADE9270070A498 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B9F44C22ADE9270070A498 /* SplashViewController.swift */; };
 		70BA8CFD22A95706006D70FC /* SpellDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA8CFC22A95706006D70FC /* SpellDetailViewController.swift */; };
 		70BA8D0022A976AA006D70FC /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA8CFF22A976AA006D70FC /* Utility.swift */; };
 		70BA8D0222A97735006D70FC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BA8D0122A97735006D70FC /* String.swift */; };
@@ -61,10 +66,12 @@
 		1C2E6E8C82B9C70B8F81B32E /* Pods_FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		225E7FE172C0EF1F49414EF0 /* Pods-FinalProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-FinalProjectTests/Pods-FinalProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3317B5F89DA2E375797DFFBF /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
+		706F710A22AEC7AD0015169F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		706F710C22AEC99A0015169F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		706F710F22AF50DD0015169F /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		70AE450322A5903600271CDD /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70AE450622A5903600271CDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70AE450E22A5903600271CDD /* FinalProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalProject.xcdatamodel; sourceTree = "<group>"; };
-		70AE451022A5903A00271CDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70AE451322A5903A00271CDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		70AE451522A5903A00271CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70AE451A22A5903A00271CDD /* FinalProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +92,9 @@
 		70AE456E22A8257B00271CDD /* SpellsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellsViewController.swift; sourceTree = "<group>"; };
 		70AE457022A82CBE00271CDD /* SpellTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellTableCell.swift; sourceTree = "<group>"; };
 		70AE457122A82CBE00271CDD /* SpellTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpellTableCell.xib; sourceTree = "<group>"; };
+		70B9F44622ACD7180070A498 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		70B9F44A22AD983D0070A498 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		70B9F44C22ADE9270070A498 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		70BA8CFC22A95706006D70FC /* SpellDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellDetailViewController.swift; sourceTree = "<group>"; };
 		70BA8CFF22A976AA006D70FC /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		70BA8D0122A97735006D70FC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -132,6 +142,57 @@
 				C58BDF3151C05A422FC641BC /* Pods_FinalProjectTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		706F710522AEC5AE0015169F /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				70AE453C22A61C2100271CDD /* MainViewController.swift */,
+				70AE456A22A770A100271CDD /* HouseDetailViewController.swift */,
+			);
+			path = HomePage;
+			sourceTree = "<group>";
+		};
+		706F710622AEC5D40015169F /* SpellPage */ = {
+			isa = PBXGroup;
+			children = (
+				70AE456E22A8257B00271CDD /* SpellsViewController.swift */,
+				70BA8CFC22A95706006D70FC /* SpellDetailViewController.swift */,
+			);
+			path = SpellPage;
+			sourceTree = "<group>";
+		};
+		706F710722AEC5E50015169F /* CharPage */ = {
+			isa = PBXGroup;
+			children = (
+				70BA8D1622AACEAF006D70FC /* CharViewController.swift */,
+				70BA8D2622AC4815006D70FC /* CharDetailViewController.swift */,
+			);
+			path = CharPage;
+			sourceTree = "<group>";
+		};
+		706F710822AEC5F40015169F /* RegisterPage */ = {
+			isa = PBXGroup;
+			children = (
+				70B9F44A22AD983D0070A498 /* RegisterViewController.swift */,
+			);
+			path = RegisterPage;
+			sourceTree = "<group>";
+		};
+		706F710922AEC6090015169F /* SortingHatPage */ = {
+			isa = PBXGroup;
+			children = (
+				70AE453E22A61E1700271CDD /* SotingHatViewController.swift */,
+			);
+			path = SortingHatPage;
+			sourceTree = "<group>";
+		};
+		706F710E22AEDDF90015169F /* ProfilePage */ = {
+			isa = PBXGroup;
+			children = (
+				706F710A22AEC7AD0015169F /* ProfileViewController.swift */,
+			);
+			path = ProfilePage;
 			sourceTree = "<group>";
 		};
 		70AE44FA22A5903600271CDD = {
@@ -184,13 +245,13 @@
 		70AE453122A5908700271CDD /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				70AE453C22A61C2100271CDD /* MainViewController.swift */,
-				70AE456E22A8257B00271CDD /* SpellsViewController.swift */,
-				70BA8D1622AACEAF006D70FC /* CharViewController.swift */,
-				70AE453E22A61E1700271CDD /* SotingHatViewController.swift */,
-				70AE456A22A770A100271CDD /* HouseDetailViewController.swift */,
-				70BA8CFC22A95706006D70FC /* SpellDetailViewController.swift */,
-				70BA8D2622AC4815006D70FC /* CharDetailViewController.swift */,
+				706F710822AEC5F40015169F /* RegisterPage */,
+				706F710522AEC5AE0015169F /* HomePage */,
+				706F710722AEC5E50015169F /* CharPage */,
+				706F710622AEC5D40015169F /* SpellPage */,
+				706F710922AEC6090015169F /* SortingHatPage */,
+				706F710E22AEDDF90015169F /* ProfilePage */,
+				70B9F44C22ADE9270070A498 /* SplashViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -199,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				70AE454422A6B6B900271CDD /* Main.storyboard */,
+				706F710F22AF50DD0015169F /* Detail.storyboard */,
 				70AE451222A5903A00271CDD /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -207,10 +269,10 @@
 		70AE453322A590B400271CDD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				706F710C22AEC99A0015169F /* Assets.xcassets */,
+				70BA8D1B22AAD2A2006D70FC /* CharTabelCell */,
 				70BA8D1922AAD27A006D70FC /* HouseCollectionCell */,
 				70BA8D1A22AAD28E006D70FC /* SpellTableCell */,
-				70BA8D1B22AAD2A2006D70FC /* CharTabelCell */,
-				70AE451022A5903A00271CDD /* Assets.xcassets */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -262,6 +324,7 @@
 		70BA8CFE22A97690006D70FC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				70B9F44622ACD7180070A498 /* UserSettings.swift */,
 				70BA8CFF22A976AA006D70FC /* Utility.swift */,
 			);
 			path = Utilities;
@@ -392,7 +455,8 @@
 				70AE451422A5903A00271CDD /* LaunchScreen.storyboard in Resources */,
 				70BA8D1F22AAD2D5006D70FC /* CharTableCell.xib in Resources */,
 				70BA8D0622A9802C006D70FC /* GoogleService-Info.plist in Resources */,
-				70AE451122A5903A00271CDD /* Assets.xcassets in Resources */,
+				706F711022AF50DD0015169F /* Detail.storyboard in Resources */,
+				706F710D22AEC99B0015169F /* Assets.xcassets in Resources */,
 				70AE457322A82CBE00271CDD /* SpellTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,10 +546,12 @@
 				70AE453F22A61E1700271CDD /* SotingHatViewController.swift in Sources */,
 				70AE452E22A5908000271CDD /* APIQuery.swift in Sources */,
 				70BA8D2722AC4815006D70FC /* CharDetailViewController.swift in Sources */,
+				706F710B22AEC7AD0015169F /* ProfileViewController.swift in Sources */,
 				70AE450722A5903600271CDD /* AppDelegate.swift in Sources */,
 				70BA8D1122AA0643006D70FC /* UIViewController.swift in Sources */,
 				70AE452D22A5908000271CDD /* House.swift in Sources */,
 				70AE457222A82CBE00271CDD /* SpellTableCell.swift in Sources */,
+				70B9F44722ACD7180070A498 /* UserSettings.swift in Sources */,
 				70AE456F22A8257B00271CDD /* SpellsViewController.swift in Sources */,
 				70AE453022A5908000271CDD /* Constants.swift in Sources */,
 				70BA8D1E22AAD2D5006D70FC /* CharTableCell.swift in Sources */,
@@ -496,10 +562,12 @@
 				70BA8CFD22A95706006D70FC /* SpellDetailViewController.swift in Sources */,
 				70BA8D1322AAC7DA006D70FC /* Character.swift in Sources */,
 				70AE452F22A5908000271CDD /* APIService.swift in Sources */,
+				70B9F44B22AD983D0070A498 /* RegisterViewController.swift in Sources */,
 				70BA8D0222A97735006D70FC /* String.swift in Sources */,
 				70BA8D0D22A9FB16006D70FC /* FireViewModel.swift in Sources */,
 				70BA8D1722AACEAF006D70FC /* CharViewController.swift in Sources */,
 				70AE453D22A61C2100271CDD /* MainViewController.swift in Sources */,
+				70B9F44D22ADE9270070A498 /* SplashViewController.swift in Sources */,
 				70AE454322A6ABCF00271CDD /* Notification.swift in Sources */,
 				70AE453B22A5915100271CDD /* SpellViewModel.swift in Sources */,
 				70AE450F22A5903600271CDD /* FinalProject.xcdatamodeld in Sources */,

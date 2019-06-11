@@ -1,6 +1,6 @@
 /*
  
- Firebase ViewModel - view model used by SpellDetailViewController and ***
+ Firebase ViewModel - view model used by SpellDetailViewController and ProfileViewController
  
  Technology:
  communitication pattern: notification
@@ -11,11 +11,15 @@ import Foundation
 
 class FireViewModel {
     
+    // container for spells fetched from Firebase database
     var spells = [Spell]() {
         didSet {
             NotificationCenter.default.post(name: Notification.Name.FireNotification, object: nil)
         }
     }
+    
+    // container for selected spell
+    var currentSpell: Spell!
     
     func getFire() {
         fireService.get { [unowned self] spells in

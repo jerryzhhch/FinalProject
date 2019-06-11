@@ -10,6 +10,7 @@
 import Foundation
 
 class House: Decodable {
+//    let _id: String
     let name: String
     let mascot: String
     let headOfHouse: String
@@ -18,5 +19,5 @@ class House: Decodable {
 //    let members: [String]
     let values: [String]
     let colors: [String]
-
+    
 }

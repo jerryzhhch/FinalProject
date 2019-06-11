@@ -91,12 +91,8 @@ extension SpellsViewController: UITableViewDelegate, UITableViewDataSource {
     // select table cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        let detailVC = storyboard.instantiateViewController(withIdentifier: "SpellDetailViewController") as! SpellDetailViewController
         let spell = isFiltering() ? spellModel.filteredSpells[indexPath.row] : getSpellsBySection(section: indexPath.section)[indexPath.row]
-        spellModel.currentSpell = spell
-        detailVC.viewModel = spellModel
-        navigationController?.pushViewController(detailVC, animated: true)
+        goToDetail(nav: navigationController!, object: spell, type: "spell")
     }
 }
 

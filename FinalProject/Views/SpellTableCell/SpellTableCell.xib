@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Spell" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jeZ-Fr-2YG">
-                        <rect key="frame" x="10" y="10" width="300" height="49.5"/>
+                        <rect key="frame" x="30" y="10" width="280" height="49.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -28,11 +28,12 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="jeZ-Fr-2YG" secondAttribute="trailing" constant="10" id="1Xx-7B-fbc"/>
-                    <constraint firstItem="jeZ-Fr-2YG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="HLi-NI-apE"/>
+                    <constraint firstItem="jeZ-Fr-2YG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="HLi-NI-apE"/>
                     <constraint firstItem="jeZ-Fr-2YG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="fDr-9M-KrF"/>
                     <constraint firstAttribute="bottom" secondItem="jeZ-Fr-2YG" secondAttribute="bottom" constant="10" id="vZT-2U-dvw"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="spellLabel" destination="jeZ-Fr-2YG" id="taI-Da-S5j"/>

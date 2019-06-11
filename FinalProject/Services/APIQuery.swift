@@ -18,10 +18,6 @@ struct APIQuery {
         return base + Constants.APIMethods.houses.rawValue + key
     }
     
-    static func getAHouse() -> String {
-        return base + "sortingHat"
-    }
-    
     static func getSpells() -> String {
         return base + Constants.APIMethods.spells.rawValue + key
     }

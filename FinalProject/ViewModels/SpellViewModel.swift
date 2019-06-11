@@ -40,14 +40,6 @@ class SpellViewModel {
     // container for randome House
     var randomHouse: String!
     
-    // get a random House
-    func getAhouse() {
-        apiService.getAHouse { [unowned self] (house) in
-            self.randomHouse = house
-            print("Random House: ", self.randomHouse)
-        }
-    }
-    
     // get all Spells
     func getSpells() {
         apiService.getSpells { [unowned self] (data) in

@@ -12,5 +12,6 @@ extension Notification.Name {
     static let HouseNotification = Notification.Name("House")
 //    static let SpellNotification = Notification.Name("Spell")
     static let FireNotification = Notification.Name("Fire")
-    static let CharacterNotification = Notification.Name("Character")
+    static let CharacterNotificationOne = Notification.Name("CharIndex")
+    static let CharacterNotificationTwo = Notification.Name("CharHouse")
 }

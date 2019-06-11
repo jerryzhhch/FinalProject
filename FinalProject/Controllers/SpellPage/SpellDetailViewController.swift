@@ -22,7 +22,7 @@ class SpellDetailViewController: UIViewController {
     @IBOutlet weak var forgetButton: UIButton!
     @IBOutlet weak var forgetLabel: UILabel!
     
-    var viewModel = SpellViewModel()
+    var spell: Spell!
     let fireModel = FireViewModel()
     
     override func viewDidLoad() {
@@ -33,12 +33,11 @@ class SpellDetailViewController: UIViewController {
     }
 
     @IBAction func learnButtonTapped(_ sender: UIButton) {
-        print("learning...")
-        // No more than 5 spells
-        if fireModel.spells.count == 5 {
+        // No more than limits
+        if fireModel.spells.count == UserSettings.getLimit() {
             showAlert(title: "Whoops", message: "You can only learn five spells at this time")
         } else {
-            fireService.save(spell: viewModel.currentSpell)
+            fireService.save(spell: spell)
             DispatchQueue.main.async {
                 self.learnedIcon.isHidden = false
             }
@@ -47,28 +46,25 @@ class SpellDetailViewController: UIViewController {
     }
     
     @IBAction func forgetButtonTapped(_ sender: UIButton) {
-        print("forget")
-        fireService.remove(spell: viewModel.currentSpell)
+        fireService.remove(spell: spell)
         DispatchQueue.main.async {
             self.learnedIcon.isHidden = true
         }
         fireModel.getFire()
     }
-    
-    
-    
+  
     // helping func
     func setupView() {
-        titleLabel.text = viewModel.currentSpell.spell
-        typeLabel.attributedText = viewModel.currentSpell.type.makeBold(boldText: "Type:\n")
-        descriptionLabel.attributedText = viewModel.currentSpell.effect.makeBold(boldText: "Effect:\n")
+        titleLabel.text = spell.spell
+        typeLabel.attributedText = spell.type.makeBold(boldText: "Type:\n")
+        descriptionLabel.attributedText = spell.effect.makeBold(boldText: "Effect:\n")
         learnedIcon.layer.cornerRadius = 15
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateView), name: Notification.Name.FireNotification, object: nil)
     }
     
     @objc func updateView() {
-        if fireModel.isExisted(spell: viewModel.currentSpell) {
+        if fireModel.isExisted(spell: spell) {
             DispatchQueue.main.async {
                 self.learnedIcon.isHidden = false
             }

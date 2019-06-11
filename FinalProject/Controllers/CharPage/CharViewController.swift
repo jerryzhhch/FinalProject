@@ -1,3 +1,12 @@
+/*
+ 
+ Characters View Controller - manages Characters table view
+ 
+ Technology:
+ UITableView - sets sections, section header, table cells in each section, and section index title
+ applying view model by communitication pattern: notification and design pattern: singleton pattern
+ 
+ */
 
 import UIKit
 
@@ -16,7 +25,7 @@ class CharViewController: UIViewController {
     
     // helping func
     func setupView() {
-        NotificationCenter.default.addObserver(self, selector: #selector(upsdateView), name: Notification.Name.CharacterNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(upsdateView), name: Notification.Name.CharacterNotificationOne, object: nil)
         
         characterTableView.register(UINib(nibName: CharTableCell.identifier, bundle: .main), forCellReuseIdentifier: CharTableCell.identifier)
         
@@ -29,10 +38,11 @@ class CharViewController: UIViewController {
         }
     }
 
+    // get characters from each section
     func getCharsBySection(section: Int) -> [Character] {
-        let keys = charModel.groupedCharacters.keys.sorted(by: {$0 < $1})
+        let keys = charModel.groupedCharByIndex.keys.sorted(by: {$0 < $1})
         let key = keys[section]
-        return charModel.groupedCharacters[key]!
+        return charModel.groupedCharByIndex[key]!
     }
     
 } //end class
@@ -42,7 +52,7 @@ class CharViewController: UIViewController {
 extension CharViewController: UITableViewDelegate, UITableViewDataSource {
     // number of sections
     func numberOfSections(in tableView: UITableView) -> Int {
-        return charModel.groupedCharacters.keys.count
+        return charModel.groupedCharByIndex.keys.count
     }
     
     // number of rows in a section
@@ -61,15 +71,9 @@ extension CharViewController: UITableViewDelegate, UITableViewDataSource {
         header.textLabel?.textColor = .lightGray
     }
     
-//    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let header = UIView(frame: CGRect(x: 0, y:0, width: tableView.frame.width, height: 20))
-//        header.backgroundColor = .orange
-//        return header
-//    }
-    
     // section header title
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return charModel.groupedCharacters.keys.sorted(by: {$0 < $1})[section]
+        return charModel.groupedCharByIndex.keys.sorted(by: {$0 < $1})[section]
     }
     
     // set table cell
@@ -84,15 +88,11 @@ extension CharViewController: UITableViewDelegate, UITableViewDataSource {
     // select table cell
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let storyboard = UIStoryboard(name: "Main", bundle: .main)
-        let detailVC = storyboard.instantiateViewController(withIdentifier: "CharDetailViewController") as! CharDetailViewController
         let char = getCharsBySection(section: indexPath.section)[indexPath.row]
-        charModel.currentChar = char
-        detailVC.viewModel = self.charModel
-        navigationController?.pushViewController(detailVC, animated: true)
+        goToDetail(nav: navigationController!, object: char, type: "character")
     }
     
-    //
+    // enbale side index bar
     func sectionIndexTitles(for tableView: UITableView) -> [String]? {
         let groupedChar = Dictionary(grouping: charModel.characters, by: {$0.name.prefix(1).uppercased()})
         let keys = groupedChar.keys.sorted(by: {$0 < $1})

@@ -44,26 +44,23 @@ class HouseDetailViewController: UIViewController {
         switch viewModel.currentHouse.name {
         case "Gryffindor":
             houseWords.text = Constants.houseWords.Gryffindor.rawValue
-            houseImage.image = #imageLiteral(resourceName: "GryffindorFlag")
-            mascotImage.image = #imageLiteral(resourceName: "GryffindorMascot")
+            houseImage.image = UIImage(named: Constants.defaultImage.GryffindorFlag.rawValue)
+            mascotImage.image = UIImage(named: Constants.defaultImage.GryffindorFlag.rawValue)
         case "Ravenclaw":
             houseWords.text = Constants.houseWords.Ravenclaw.rawValue
-            houseImage.image = #imageLiteral(resourceName: "RavenclawFlag")
-            mascotImage.image = #imageLiteral(resourceName: "RavenclawMascot")
+            houseImage.image = UIImage(named: Constants.defaultImage.RavenclawFlag.rawValue)
+            mascotImage.image = UIImage(named: Constants.defaultImage.RavenclawMascot.rawValue)
         case "Slytherin":
             houseWords.text = Constants.houseWords.Slytherin.rawValue
-            houseImage.image = #imageLiteral(resourceName: "SlytherinFlag")
-            mascotImage.image = #imageLiteral(resourceName: "SlytherinMascot")
+            houseImage.image = UIImage(named: Constants.defaultImage.SlytherinFlag.rawValue)
+            mascotImage.image = UIImage(named: Constants.defaultImage.SlytherinMascot.rawValue)
         case "Hufflepuff":
             houseWords.text = Constants.houseWords.Hufflepuff.rawValue
-            houseImage.image = #imageLiteral(resourceName: "HufflepuffFlag")
-            mascotImage.image = #imageLiteral(resourceName: "HufflepuffMascot")
+            houseImage.image = UIImage(named: Constants.defaultImage.HufflepuffFlag.rawValue)
+            mascotImage.image = UIImage(named: Constants.defaultImage.HufflepuffMascot.rawValue)
         default:
             break
         }
     }
-
-
-    
-    
+  
 } // end class

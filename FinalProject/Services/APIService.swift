@@ -14,7 +14,7 @@ import Foundation
 let apiService = APIService.shared
 
 typealias HouseHandler = ([House]) -> Void
-typealias RandomHouseHandler = (String) -> Void
+//typealias HouseIdHandler = ([House]) -> Void
 typealias SpellHandler = ([Spell]) -> Void
 typealias CharacterHandler = ([Character]) -> Void
 
@@ -47,34 +47,6 @@ final class APIService {
                 } catch {
                     print("Cannot Serialize Data")
                     completion([])
-                    return
-                }
-            }
-        }.resume()
-    } // end func
-    
-    // return a random House
-    func getAHouse(completion: @escaping RandomHouseHandler) {
-        let urlString = APIQuery.getAHouse()
-        
-        guard let url = URL(string: urlString) else {
-            completion("")
-            return
-        }
-        print("URL: ", url)
-        session.dataTask(with: url) { (data, _, _) in
-            if let myData = data {
-                print("myData: ", myData)
-                do {
-                    guard let jsonObject = try JSONSerialization.jsonObject(with: myData, options: []) as? String else {
-                        completion("")
-                        return
-                    }
-                    completion(jsonObject)
-                    
-                } catch {
-                    print("Cannot Serialize Data")
-                    completion("")
                     return
                 }
             }

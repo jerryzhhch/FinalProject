@@ -1,4 +1,12 @@
-
+/*
+ 
+ Character Detail View Controller - manages Character Detail view
+ 
+ Technology:
+ IBAction for UIButton
+ applying Character view model by design pattern: dependency injection
+ 
+ */
 
 import UIKit
 
@@ -18,7 +26,7 @@ class CharDetailViewController: UIViewController {
     @IBOutlet weak var thirdImage: UIImageView!
     @IBOutlet weak var fourthImage: UIImageView!
     
-    var viewModel = CharacterViewModel()
+    var character: Character!
     private var iconHolder = [String]()
     
     override func viewDidLoad() {
@@ -30,31 +38,31 @@ class CharDetailViewController: UIViewController {
     // helping func
     func setupView() {
         
-        nameLabel.attributedText = viewModel.currentChar.name.makeBold(boldText: "Name:\n")
-        speciesLabel.attributedText = viewModel.currentChar.species.makeBold(boldText: "Species:\n")
-        roleLabel.attributedText = viewModel.currentChar.role.makeBold(boldText: "Role:\n")
-        houseLabel.attributedText = viewModel.currentChar.house.makeBold(boldText: "House:\n")
-        schoolLabel.attributedText = viewModel.currentChar.school.makeBold(boldText: "School:\n")
-        bloodLabel.attributedText = viewModel.currentChar.bloodStatus.makeBold(boldText: "Blood Status:\n")
+        nameLabel.attributedText = character.name.makeBold(boldText: "Name:\n")
+        speciesLabel.attributedText = character.species.makeBold(boldText: "Species:\n")
+        roleLabel.attributedText = character.role.makeBold(boldText: "Role:\n")
+        houseLabel.attributedText = character.house.makeBold(boldText: "House:\n")
+        schoolLabel.attributedText = character.school.makeBold(boldText: "School:\n")
+        bloodLabel.attributedText = character.bloodStatus.makeBold(boldText: "Blood Status:\n")
         
         DispatchQueue.main.async {
             self.charImage.image = UIImage(named: Constants.defaultImage.DefaultCharacter.rawValue)
 
         }
-        if !viewModel.currentChar.deathEater {
+        if !character.deathEater {
             wantedImage.isHidden = true
         }
         
-        if viewModel.currentChar.ministryOfMagic {
+        if character.ministryOfMagic {
             iconHolder.append(Constants.defaultImage.MinistryOfMagic.rawValue)
         }
-        if viewModel.currentChar.orderOfThePhoenix {
+        if character.orderOfThePhoenix {
             iconHolder.append(Constants.defaultImage.OrderOfThePhoenix.rawValue)
         }
-        if viewModel.currentChar.dumbledoresArmy {
+        if character.dumbledoresArmy {
             iconHolder.append(Constants.defaultImage.DumbledoresArmy.rawValue)
         }
-        if viewModel.currentChar.deathEater {
+        if character.deathEater {
             iconHolder.append(Constants.defaultImage.DeathEater.rawValue)
         }
         
@@ -64,7 +72,6 @@ class CharDetailViewController: UIViewController {
     
     // helping func
     func setIcons(imageString: [String]) {
-        print(imageString)
         let count = imageString.count
         switch count {
         case 1:
@@ -74,7 +81,6 @@ class CharDetailViewController: UIViewController {
                 self.thirdImage.isHidden = true
                 self.fourthImage.isHidden = true
             }
-            
         case 2:
             DispatchQueue.main.async {
                 self.firstImage.image = UIImage(named: imageString[0])
@@ -82,7 +88,6 @@ class CharDetailViewController: UIViewController {
                 self.thirdImage.isHidden = true
                 self.fourthImage.isHidden = true
             }
-            
         case 3:
             DispatchQueue.main.async {
                 self.firstImage.image = UIImage(named: imageString[0])
@@ -90,7 +95,6 @@ class CharDetailViewController: UIViewController {
                 self.thirdImage.image = UIImage(named: imageString[2])
                 self.fourthImage.isHidden = true
             }
-            
         case 4:
             DispatchQueue.main.async {
                 self.firstImage.image = UIImage(named: imageString[0])
@@ -98,7 +102,6 @@ class CharDetailViewController: UIViewController {
                 self.thirdImage.image = UIImage(named: imageString[2])
                 self.fourthImage.image = UIImage(named: imageString[3])
             }
-            
         default:
             self.firstImage.isHidden = true
             self.secondImage.isHidden = true
