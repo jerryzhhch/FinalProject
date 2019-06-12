@@ -66,5 +66,9 @@ struct Constants {
         case DumbledoresArmy = "DumbledoresArmy"
         case DeathEater = "DeathEater"
     }
+    
+    enum keychain: String {
+        case service = "Hogwarts"
+    }
 } // end
 

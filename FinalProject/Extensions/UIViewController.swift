@@ -34,12 +34,12 @@ extension UIViewController {
         let storyboard = UIStoryboard(name: "Detail", bundle: .main)
         switch type {
         // go to Character detail page
-        case "character" :
+        case "character":
             let detailVC = storyboard.instantiateViewController(withIdentifier: "CharDetailViewController") as! CharDetailViewController
             detailVC.character = object as! Character
             navigationController?.pushViewController(detailVC, animated: true)
         // go to Spell detail page
-        case "spell" :
+        case "spell":
             let detailVC = storyboard.instantiateViewController(withIdentifier: "SpellDetailViewController") as! SpellDetailViewController
             detailVC.spell = object as! Spell
             navigationController?.pushViewController(detailVC, animated: true)
@@ -47,6 +47,13 @@ extension UIViewController {
             break
         }
     }
+    
+    func goToProfile() {
+        let storyboard = UIStoryboard(name: "Detail", bundle: .main)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ProfileViewController") as! ProfileViewController
+        present(vc, animated: true, completion: nil)
+    }
+    
     
     func test() {
         print("----- test -----")

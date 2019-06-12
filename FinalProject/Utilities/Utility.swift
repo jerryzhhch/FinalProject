@@ -1,4 +1,11 @@
-
+/*
+ 
+ FileManager utility - helps saving uers profile image to local device
+ 
+ Technology:
+ FileManager
+ 
+ */
 
 import UIKit
 

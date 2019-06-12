@@ -1,4 +1,14 @@
-
+/*
+ 
+ Profile View Controller - manages user profile page
+ 
+ Technology:
+ UITableView - different editing styles for multiple table views
+ applying view model by communitication pattern: notification and design pattern: singleton pattern
+ UIImagePickerController - access local gallery
+ FileManager - save and load image by file path
+ 
+ */
 
 import UIKit
 
@@ -33,14 +43,13 @@ class ProfileViewController: UIViewController {
     }
     
     // enable editing
-    @IBAction func editButtonTapped(_ sender: UIBarButtonItem) {
+    @IBAction func editButtonTapped(_ sender: UIButton) {
         spellsTable.isEditing.toggle()
         if spellsTable.isEditing {
             imageButton.isHidden = false
         } else {
             imageButton.isHidden = true
         }
-        
     }
     
     // change image from photo library
@@ -49,6 +58,10 @@ class ProfileViewController: UIViewController {
         imageController.sourceType = .photoLibrary
         imageController.delegate = self
         present(imageController, animated: true, completion: nil)
+    }
+    
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
     // helping func
@@ -78,7 +91,6 @@ class ProfileViewController: UIViewController {
     @objc func updateSpells() {
         DispatchQueue.main.async {
             self.spellsTable.reloadData()
-            print("view did load")
         }
     }
     

@@ -18,6 +18,7 @@ struct UserSettings {
         case limit = "limit"
         case firstRegistration = "first"
         case imageHash = "hash"
+        case hasPassword = "password"
     }
     
     // Setters
@@ -43,6 +44,10 @@ struct UserSettings {
     
     static func saveImageHash(hash: String) {
         UserDefaults.standard.set(hash, forKey: UserSettings.keys.imageHash.rawValue)
+    }
+    
+    static func saveHasPassword(hasPassword: Bool) {
+        UserDefaults.standard.set(hasPassword, forKey: UserSettings.keys.hasPassword.rawValue)
     }
     
     // Getters
@@ -74,4 +79,9 @@ struct UserSettings {
     static func getImageHash() -> String {
         return UserDefaults.standard.value(forKey: UserSettings.keys.imageHash.rawValue) as? String ?? ""
     }
+    
+    static func getHasPassword() -> Bool {
+        return UserDefaults.standard.value(forKey: UserSettings.keys.hasPassword.rawValue) as? Bool ?? false
+    }
+    
 }

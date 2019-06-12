@@ -11,6 +11,12 @@
 		706F710B22AEC7AD0015169F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706F710A22AEC7AD0015169F /* ProfileViewController.swift */; };
 		706F710D22AEC99B0015169F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706F710C22AEC99A0015169F /* Assets.xcassets */; };
 		706F711022AF50DD0015169F /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706F710F22AF50DD0015169F /* Detail.storyboard */; };
+		7099ADD822B0189200A6C29A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099ADD722B0189200A6C29A /* AuthViewController.swift */; };
+		7099ADDB22B01FF500A6C29A /* AuthCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099ADDA22B01FF500A6C29A /* AuthCollectionCell.swift */; };
+		7099AE0E22B0B98300A6C29A /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AE0D22B0B98300A6C29A /* KeychainItem.swift */; };
+		7099AE1722B0C6E200A6C29A /* AuthHeaderCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AE1522B0C6E200A6C29A /* AuthHeaderCollectionCell.swift */; };
+		7099AE1822B0C6E200A6C29A /* AuthHeaderCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7099AE1622B0C6E200A6C29A /* AuthHeaderCollectionCell.xib */; };
+		7099AE1A22B0D2D000A6C29A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AE1922B0D2D000A6C29A /* MapViewController.swift */; };
 		70AE450722A5903600271CDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE450622A5903600271CDD /* AppDelegate.swift */; };
 		70AE450F22A5903600271CDD /* FinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70AE450D22A5903600271CDD /* FinalProject.xcdatamodeld */; };
 		70AE451422A5903A00271CDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70AE451222A5903A00271CDD /* LaunchScreen.storyboard */; };
@@ -69,6 +75,12 @@
 		706F710A22AEC7AD0015169F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		706F710C22AEC99A0015169F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		706F710F22AF50DD0015169F /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		7099ADD722B0189200A6C29A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = ../../AuthViewController.swift; sourceTree = "<group>"; };
+		7099ADDA22B01FF500A6C29A /* AuthCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCollectionCell.swift; sourceTree = "<group>"; };
+		7099AE0D22B0B98300A6C29A /* KeychainItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
+		7099AE1522B0C6E200A6C29A /* AuthHeaderCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderCollectionCell.swift; sourceTree = "<group>"; };
+		7099AE1622B0C6E200A6C29A /* AuthHeaderCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthHeaderCollectionCell.xib; sourceTree = "<group>"; };
+		7099AE1922B0D2D000A6C29A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		70AE450322A5903600271CDD /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70AE450622A5903600271CDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70AE450E22A5903600271CDD /* FinalProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalProject.xcdatamodel; sourceTree = "<group>"; };
@@ -190,9 +202,20 @@
 		706F710E22AEDDF90015169F /* ProfilePage */ = {
 			isa = PBXGroup;
 			children = (
+				7099ADD722B0189200A6C29A /* AuthViewController.swift */,
 				706F710A22AEC7AD0015169F /* ProfileViewController.swift */,
 			);
 			path = ProfilePage;
+			sourceTree = "<group>";
+		};
+		7099ADD922B01EC600A6C29A /* AuthCollevtionCell */ = {
+			isa = PBXGroup;
+			children = (
+				7099ADDA22B01FF500A6C29A /* AuthCollectionCell.swift */,
+				7099AE1522B0C6E200A6C29A /* AuthHeaderCollectionCell.swift */,
+				7099AE1622B0C6E200A6C29A /* AuthHeaderCollectionCell.xib */,
+			);
+			path = AuthCollevtionCell;
 			sourceTree = "<group>";
 		};
 		70AE44FA22A5903600271CDD = {
@@ -252,6 +275,7 @@
 				706F710922AEC6090015169F /* SortingHatPage */,
 				706F710E22AEDDF90015169F /* ProfilePage */,
 				70B9F44C22ADE9270070A498 /* SplashViewController.swift */,
+				7099AE1922B0D2D000A6C29A /* MapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -273,6 +297,7 @@
 				70BA8D1B22AAD2A2006D70FC /* CharTabelCell */,
 				70BA8D1922AAD27A006D70FC /* HouseCollectionCell */,
 				70BA8D1A22AAD28E006D70FC /* SpellTableCell */,
+				7099ADD922B01EC600A6C29A /* AuthCollevtionCell */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -326,6 +351,7 @@
 			children = (
 				70B9F44622ACD7180070A498 /* UserSettings.swift */,
 				70BA8CFF22A976AA006D70FC /* Utility.swift */,
+				7099AE0D22B0B98300A6C29A /* KeychainItem.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -455,6 +481,7 @@
 				70AE451422A5903A00271CDD /* LaunchScreen.storyboard in Resources */,
 				70BA8D1F22AAD2D5006D70FC /* CharTableCell.xib in Resources */,
 				70BA8D0622A9802C006D70FC /* GoogleService-Info.plist in Resources */,
+				7099AE1822B0C6E200A6C29A /* AuthHeaderCollectionCell.xib in Resources */,
 				706F711022AF50DD0015169F /* Detail.storyboard in Resources */,
 				706F710D22AEC99B0015169F /* Assets.xcassets in Resources */,
 				70AE457322A82CBE00271CDD /* SpellTableCell.xib in Resources */,
@@ -547,12 +574,14 @@
 				70AE452E22A5908000271CDD /* APIQuery.swift in Sources */,
 				70BA8D2722AC4815006D70FC /* CharDetailViewController.swift in Sources */,
 				706F710B22AEC7AD0015169F /* ProfileViewController.swift in Sources */,
+				7099AE0E22B0B98300A6C29A /* KeychainItem.swift in Sources */,
 				70AE450722A5903600271CDD /* AppDelegate.swift in Sources */,
 				70BA8D1122AA0643006D70FC /* UIViewController.swift in Sources */,
 				70AE452D22A5908000271CDD /* House.swift in Sources */,
 				70AE457222A82CBE00271CDD /* SpellTableCell.swift in Sources */,
 				70B9F44722ACD7180070A498 /* UserSettings.swift in Sources */,
 				70AE456F22A8257B00271CDD /* SpellsViewController.swift in Sources */,
+				7099ADDB22B01FF500A6C29A /* AuthCollectionCell.swift in Sources */,
 				70AE453022A5908000271CDD /* Constants.swift in Sources */,
 				70BA8D1E22AAD2D5006D70FC /* CharTableCell.swift in Sources */,
 				70BA8D0B22A9F6FE006D70FC /* SpellEx.swift in Sources */,
@@ -562,9 +591,12 @@
 				70BA8CFD22A95706006D70FC /* SpellDetailViewController.swift in Sources */,
 				70BA8D1322AAC7DA006D70FC /* Character.swift in Sources */,
 				70AE452F22A5908000271CDD /* APIService.swift in Sources */,
+				7099ADD822B0189200A6C29A /* AuthViewController.swift in Sources */,
 				70B9F44B22AD983D0070A498 /* RegisterViewController.swift in Sources */,
 				70BA8D0222A97735006D70FC /* String.swift in Sources */,
+				7099AE1A22B0D2D000A6C29A /* MapViewController.swift in Sources */,
 				70BA8D0D22A9FB16006D70FC /* FireViewModel.swift in Sources */,
+				7099AE1722B0C6E200A6C29A /* AuthHeaderCollectionCell.swift in Sources */,
 				70BA8D1722AACEAF006D70FC /* CharViewController.swift in Sources */,
 				70AE453D22A61C2100271CDD /* MainViewController.swift in Sources */,
 				70B9F44D22ADE9270070A498 /* SplashViewController.swift in Sources */,
