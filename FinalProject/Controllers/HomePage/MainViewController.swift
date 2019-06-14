@@ -9,13 +9,17 @@
  */
 
 import UIKit
+import AVFoundation
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var videoView: UIImageView!
     @IBOutlet weak var houseCollectionView: UICollectionView!
     @IBOutlet weak var welcomeLabel: UILabel!
     
     let houseModel = HouseViewModel()
+//    var player : AVPlayer!
+    private var avPlayerLayer : AVPlayerLayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,10 +33,39 @@ class MainViewController: UIViewController {
         test()
     }
     
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//        avPlayerLayer.frame = videoView.layer.bounds
+//    }
+    
+    @IBAction func mapButtonTapped(_ sender: UIBarButtonItem) {
+        let storyboard = UIStoryboard(name: "Detail", bundle: .main)
+        let mapVC = storyboard.instantiateViewController(withIdentifier: "MapViewController") as! MapViewController
+        mapVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(mapVC, animated: true)
+    }
+    
+    
     // helping func
     func setupView() {
         NotificationCenter.default.addObserver(self, selector: #selector(updateView), name: Notification.Name.HouseNotification, object: nil)
+        
+//        guard let path = Bundle.main.path(forResource: "sample", ofType: ".mov") else {
+//            print("No Video Found")
+//            return
+//        }
+//
+//        let player = AVPlayer(url: URL(fileURLWithPath: path))
+//        avPlayerLayer = AVPlayerLayer(player: player)
+//        avPlayerLayer.videoGravity = AVLayerVideoGravity.resize
+//        videoView.layer.addSublayer(avPlayerLayer)
+//        player.play()
+        
+       videoView.loadGif(name: "test")
+        
     }
+    
+    
     
     @objc func updateView() {
         DispatchQueue.main.async {

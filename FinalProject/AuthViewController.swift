@@ -1,11 +1,18 @@
-
+/*
+ 
+ Authentication View Controller - manages authentication page
+ 
+ Technology:
+ Keychain - save user password
+ Biometric authentication
+ 
+ */
 
 import UIKit
 import LocalAuthentication
 
 
 class AuthViewController: UIViewController {
-
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var asteriksLabel: UILabel!
@@ -70,13 +77,13 @@ extension AuthViewController: UICollectionViewDataSource, UICollectionViewDelega
     // size for cell
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         var size = CGFloat()
-        size = view.frame.size.width / 4.6
+        size = view.frame.size.width / 4.8
         return .init(width: size, height: size)
     }
     
     // inset for section
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 100, left: 50, bottom: 15, right: 50)
+        return UIEdgeInsets(top: 20, left: 60, bottom: 0, right: 60)
     }
     
     // minimum inter item spacing for section

@@ -17,6 +17,8 @@
 		7099AE1722B0C6E200A6C29A /* AuthHeaderCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AE1522B0C6E200A6C29A /* AuthHeaderCollectionCell.swift */; };
 		7099AE1822B0C6E200A6C29A /* AuthHeaderCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7099AE1622B0C6E200A6C29A /* AuthHeaderCollectionCell.xib */; };
 		7099AE1A22B0D2D000A6C29A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AE1922B0D2D000A6C29A /* MapViewController.swift */; };
+		7099AE1F22B19F4200A6C29A /* test.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7099AE1E22B19F4200A6C29A /* test.gif */; };
+		7099AE2122B1A45700A6C29A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AE2022B1A45700A6C29A /* UIImage.swift */; };
 		70AE450722A5903600271CDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE450622A5903600271CDD /* AppDelegate.swift */; };
 		70AE450F22A5903600271CDD /* FinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70AE450D22A5903600271CDD /* FinalProject.xcdatamodeld */; };
 		70AE451422A5903A00271CDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70AE451222A5903A00271CDD /* LaunchScreen.storyboard */; };
@@ -81,6 +83,8 @@
 		7099AE1522B0C6E200A6C29A /* AuthHeaderCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderCollectionCell.swift; sourceTree = "<group>"; };
 		7099AE1622B0C6E200A6C29A /* AuthHeaderCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthHeaderCollectionCell.xib; sourceTree = "<group>"; };
 		7099AE1922B0D2D000A6C29A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7099AE1E22B19F4200A6C29A /* test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = test.gif; sourceTree = "<group>"; };
+		7099AE2022B1A45700A6C29A /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		70AE450322A5903600271CDD /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70AE450622A5903600271CDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70AE450E22A5903600271CDD /* FinalProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalProject.xcdatamodel; sourceTree = "<group>"; };
@@ -218,6 +222,14 @@
 			path = AuthCollevtionCell;
 			sourceTree = "<group>";
 		};
+		7099AE1D22B1988700A6C29A /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				7099AE1E22B19F4200A6C29A /* test.gif */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
 		70AE44FA22A5903600271CDD = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +261,7 @@
 				70AE453322A590B400271CDD /* Views */,
 				70AE453722A5910A00271CDD /* Extensions */,
 				70BA8CFE22A97690006D70FC /* Utilities */,
+				7099AE1D22B1988700A6C29A /* Video */,
 				70AE451522A5903A00271CDD /* Info.plist */,
 				70AE450622A5903600271CDD /* AppDelegate.swift */,
 				70BA8D0522A9802C006D70FC /* GoogleService-Info.plist */,
@@ -342,6 +355,7 @@
 				70BA8D0122A97735006D70FC /* String.swift */,
 				70BA8D0A22A9F6FE006D70FC /* SpellEx.swift */,
 				70BA8D1022AA0643006D70FC /* UIViewController.swift */,
+				7099AE2022B1A45700A6C29A /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -479,6 +493,7 @@
 			files = (
 				70AE454522A6B6B900271CDD /* Main.storyboard in Resources */,
 				70AE451422A5903A00271CDD /* LaunchScreen.storyboard in Resources */,
+				7099AE1F22B19F4200A6C29A /* test.gif in Resources */,
 				70BA8D1F22AAD2D5006D70FC /* CharTableCell.xib in Resources */,
 				70BA8D0622A9802C006D70FC /* GoogleService-Info.plist in Resources */,
 				7099AE1822B0C6E200A6C29A /* AuthHeaderCollectionCell.xib in Resources */,
@@ -602,6 +617,7 @@
 				70B9F44D22ADE9270070A498 /* SplashViewController.swift in Sources */,
 				70AE454322A6ABCF00271CDD /* Notification.swift in Sources */,
 				70AE453B22A5915100271CDD /* SpellViewModel.swift in Sources */,
+				7099AE2122B1A45700A6C29A /* UIImage.swift in Sources */,
 				70AE450F22A5903600271CDD /* FinalProject.xcdatamodeld in Sources */,
 				70BA8D0022A976AA006D70FC /* Utility.swift in Sources */,
 			);

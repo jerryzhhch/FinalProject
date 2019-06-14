@@ -1,4 +1,11 @@
-
+/*
+ 
+ Keychain utility - helps saving and securing uers password
+ 
+ Technology:
+ Keychain
+ 
+ */
 
 import Foundation
 import Security
