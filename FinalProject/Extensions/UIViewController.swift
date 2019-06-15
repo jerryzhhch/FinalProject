@@ -54,6 +54,21 @@ extension UIViewController {
         present(vc, animated: true, completion: nil)
     }
     
+    // change part of label to BOLD
+//    func makeBold(text: String, boldString: String) -> NSAttributedString {
+//        print("-------- im here ----------")
+//        let font = UIFont.systemFontSize
+//        print("Font: ", font)
+//        let attributedString = NSMutableAttributedString(string: text, attributes: [NSAttributedString.Key.font: font])
+//        print("Attributed String: ", attributedString)
+//        let boldFontAttribute = [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: font)]
+//        print("Bolde Font Attribute: ", boldFontAttribute)
+//        let range = (text as NSString).range(of: boldString)
+//        print("Range: ", range)
+//        attributedString.addAttributes(boldFontAttribute, range: range)
+//        print("Attributed String: ", attributedString)
+//        return attributedString
+//    }
     
     func test() {
         print("----- test -----")

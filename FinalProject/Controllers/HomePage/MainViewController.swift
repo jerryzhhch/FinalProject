@@ -28,11 +28,6 @@ class MainViewController: UIViewController {
         houseModel.getHouses()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        test()
-    }
-    
 //    override func viewDidLayoutSubviews() {
 //        super.viewDidLayoutSubviews()
 //        avPlayerLayer.frame = videoView.layer.bounds
@@ -61,11 +56,8 @@ class MainViewController: UIViewController {
 //        videoView.layer.addSublayer(avPlayerLayer)
 //        player.play()
         
-       videoView.loadGif(name: "test")
-        
+       videoView.loadGif(name: "welcome")
     }
-    
-    
     
     @objc func updateView() {
         DispatchQueue.main.async {
@@ -94,19 +86,18 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     // size for cell
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collectionView.frame.size.width - 90) / 2
-        let height = (collectionView.frame.size.height - 80) / 2
-        return .init(width: width, height: height)
+        let size = collectionView.frame.width / 2.5
+        return .init(width: size, height: size)
     }
     
     // inset for section
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 50, left: 30, bottom: 30, right: 30)
+        return UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
     }
     
     // minimum inter item spacing for section
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 15
+        return 20
     }
     
     // select a cell

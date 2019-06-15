@@ -32,14 +32,19 @@ class HouseDetailViewController: UIViewController {
     
     // helping func
     func setupView() {
-        print(viewModel.currentHouse.name)
         houseTitle.text = viewModel.currentHouse.name + " House"
-        mascotLabel.attributedText = viewModel.currentHouse.mascot.makeBold(boldText: "Mascot:\n")
-        headLabel.attributedText = viewModel.currentHouse.headOfHouse.makeBold(boldText: "Head of House:\n")
-        ghostLabel.attributedText = viewModel.currentHouse.houseGhost.makeBold(boldText: "House Ghost:\n")
-        founderLabel.attributedText = viewModel.currentHouse.founder.makeBold(boldText: "Founder:\n")
-        valueLabel.attributedText = viewModel.currentHouse.values.joined(separator: ", ").makeBold(boldText: "Value:\n")
-        colorLabel.attributedText = viewModel.currentHouse.colors.joined(separator: ", ").makeBold(boldText: "Color:\n")
+        
+        mascotLabel.text = "Mascot:\n\(viewModel.currentHouse.mascot)"
+
+        headLabel.text = "Head of House:\n\(viewModel.currentHouse.headOfHouse)"
+        
+        ghostLabel.text = "House Ghost:\n\(viewModel.currentHouse.headOfHouse)"
+        
+        founderLabel.text = "Founder:\n\(viewModel.currentHouse.founder)"
+        
+        valueLabel.text = "Value:\n\(viewModel.currentHouse.values.joined(separator: ", "))"
+        
+        colorLabel.text = "Color:\n\(viewModel.currentHouse.colors.joined(separator: ", "))"
         
         switch viewModel.currentHouse.name {
         case "Gryffindor":

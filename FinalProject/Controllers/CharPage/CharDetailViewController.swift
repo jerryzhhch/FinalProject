@@ -37,22 +37,25 @@ class CharDetailViewController: UIViewController {
     
     // helping func
     func setupView() {
+        nameLabel.text = "Name:\n\(character.name)"
         
-        nameLabel.attributedText = character.name.makeBold(boldText: "Name:\n")
-        speciesLabel.attributedText = character.species.makeBold(boldText: "Species:\n")
-        roleLabel.attributedText = character.role.makeBold(boldText: "Role:\n")
-        houseLabel.attributedText = character.house.makeBold(boldText: "House:\n")
-        schoolLabel.attributedText = character.school.makeBold(boldText: "School:\n")
-        bloodLabel.attributedText = character.bloodStatus.makeBold(boldText: "Blood Status:\n")
+        speciesLabel.text = "Species:\n\(character.species)"
+        
+        roleLabel.text = "Role:\n\(character.role)"
+            
+        houseLabel.text = "House:\n\(character.house)"
+            
+        schoolLabel.text = "School:\n\(character.school)"
+        
+        bloodLabel.text = "Blood Status:\n\(character.bloodStatus)"
         
         DispatchQueue.main.async {
             self.charImage.image = UIImage(named: Constants.defaultImage.DefaultCharacter.rawValue)
-
         }
+        
         if !character.deathEater {
             wantedImage.isHidden = true
         }
-        
         if character.ministryOfMagic {
             iconHolder.append(Constants.defaultImage.MinistryOfMagic.rawValue)
         }
@@ -67,7 +70,6 @@ class CharDetailViewController: UIViewController {
         }
         
         setIcons(imageString: iconHolder)
-        
     }
     
     // helping func

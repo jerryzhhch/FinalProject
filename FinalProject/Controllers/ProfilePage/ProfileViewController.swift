@@ -69,8 +69,10 @@ class ProfileViewController: UIViewController {
         spellsTable.register(UINib(nibName: SpellTableCell.identifier, bundle: .main), forCellReuseIdentifier: SpellTableCell.identifier)
         classmatesTable.register(UINib(nibName: CharTableCell.identifier, bundle: .main), forCellReuseIdentifier: CharTableCell.identifier)
         
-        profileImage.layer.cornerRadius = profileImage.layer.frame.height / 2
-        imageButton.layer.cornerRadius = imageButton.layer.frame.height / 2.5
+        
+        profileImage.layer.cornerRadius = 20
+        
+        imageButton.layer.cornerRadius = 5
         imageButton.isHidden = true
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateSpells), name: Notification.Name.FireNotification, object: nil)

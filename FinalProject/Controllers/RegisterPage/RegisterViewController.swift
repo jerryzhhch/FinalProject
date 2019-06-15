@@ -40,7 +40,7 @@ class RegisterViewController: UIViewController {
         UserSettings.saveLimit(limit: limit)
         
         // save registration status
-//        UserSettings.saveRegStatus(first: true)
+        UserSettings.saveRegStatus(first: true)
         
     }
     

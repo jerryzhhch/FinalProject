@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1BDB054107439ABCB1FEE7CA /* Pods_FinalProjectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C58BDF3151C05A422FC641BC /* Pods_FinalProjectTests.framework */; };
 		706F710B22AEC7AD0015169F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706F710A22AEC7AD0015169F /* ProfileViewController.swift */; };
-		706F710D22AEC99B0015169F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706F710C22AEC99A0015169F /* Assets.xcassets */; };
 		706F711022AF50DD0015169F /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706F710F22AF50DD0015169F /* Detail.storyboard */; };
 		7099ADD822B0189200A6C29A /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099ADD722B0189200A6C29A /* AuthViewController.swift */; };
 		7099ADDB22B01FF500A6C29A /* AuthCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099ADDA22B01FF500A6C29A /* AuthCollectionCell.swift */; };
@@ -17,8 +16,10 @@
 		7099AE1722B0C6E200A6C29A /* AuthHeaderCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AE1522B0C6E200A6C29A /* AuthHeaderCollectionCell.swift */; };
 		7099AE1822B0C6E200A6C29A /* AuthHeaderCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7099AE1622B0C6E200A6C29A /* AuthHeaderCollectionCell.xib */; };
 		7099AE1A22B0D2D000A6C29A /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AE1922B0D2D000A6C29A /* MapViewController.swift */; };
-		7099AE1F22B19F4200A6C29A /* test.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7099AE1E22B19F4200A6C29A /* test.gif */; };
 		7099AE2122B1A45700A6C29A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AE2022B1A45700A6C29A /* UIImage.swift */; };
+		7099AE2522B32FD500A6C29A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7099AE2422B32FD500A6C29A /* Assets.xcassets */; };
+		7099AE2722B32FE700A6C29A /* welcome.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7099AE2622B32FE700A6C29A /* welcome.gif */; };
+		7099AE2922B33A7100A6C29A /* TeamPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AE2822B33A7100A6C29A /* TeamPickViewController.swift */; };
 		70AE450722A5903600271CDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE450622A5903600271CDD /* AppDelegate.swift */; };
 		70AE450F22A5903600271CDD /* FinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70AE450D22A5903600271CDD /* FinalProject.xcdatamodeld */; };
 		70AE451422A5903A00271CDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70AE451222A5903A00271CDD /* LaunchScreen.storyboard */; };
@@ -75,7 +76,6 @@
 		225E7FE172C0EF1F49414EF0 /* Pods-FinalProjectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProjectTests.debug.xcconfig"; path = "Target Support Files/Pods-FinalProjectTests/Pods-FinalProjectTests.debug.xcconfig"; sourceTree = "<group>"; };
 		3317B5F89DA2E375797DFFBF /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		706F710A22AEC7AD0015169F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		706F710C22AEC99A0015169F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		706F710F22AF50DD0015169F /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		7099ADD722B0189200A6C29A /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = ../../AuthViewController.swift; sourceTree = "<group>"; };
 		7099ADDA22B01FF500A6C29A /* AuthCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCollectionCell.swift; sourceTree = "<group>"; };
@@ -83,8 +83,10 @@
 		7099AE1522B0C6E200A6C29A /* AuthHeaderCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderCollectionCell.swift; sourceTree = "<group>"; };
 		7099AE1622B0C6E200A6C29A /* AuthHeaderCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthHeaderCollectionCell.xib; sourceTree = "<group>"; };
 		7099AE1922B0D2D000A6C29A /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		7099AE1E22B19F4200A6C29A /* test.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = test.gif; sourceTree = "<group>"; };
 		7099AE2022B1A45700A6C29A /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		7099AE2422B32FD500A6C29A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7099AE2622B32FE700A6C29A /* welcome.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = welcome.gif; sourceTree = "<group>"; };
+		7099AE2822B33A7100A6C29A /* TeamPickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPickViewController.swift; sourceTree = "<group>"; };
 		70AE450322A5903600271CDD /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70AE450622A5903600271CDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70AE450E22A5903600271CDD /* FinalProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalProject.xcdatamodel; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				70B9F44A22AD983D0070A498 /* RegisterViewController.swift */,
+				7099AE2822B33A7100A6C29A /* TeamPickViewController.swift */,
 			);
 			path = RegisterPage;
 			sourceTree = "<group>";
@@ -225,7 +228,7 @@
 		7099AE1D22B1988700A6C29A /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				7099AE1E22B19F4200A6C29A /* test.gif */,
+				7099AE2622B32FE700A6C29A /* welcome.gif */,
 			);
 			path = Video;
 			sourceTree = "<group>";
@@ -306,7 +309,7 @@
 		70AE453322A590B400271CDD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				706F710C22AEC99A0015169F /* Assets.xcassets */,
+				7099AE2422B32FD500A6C29A /* Assets.xcassets */,
 				70BA8D1B22AAD2A2006D70FC /* CharTabelCell */,
 				70BA8D1922AAD27A006D70FC /* HouseCollectionCell */,
 				70BA8D1A22AAD28E006D70FC /* SpellTableCell */,
@@ -493,12 +496,12 @@
 			files = (
 				70AE454522A6B6B900271CDD /* Main.storyboard in Resources */,
 				70AE451422A5903A00271CDD /* LaunchScreen.storyboard in Resources */,
-				7099AE1F22B19F4200A6C29A /* test.gif in Resources */,
 				70BA8D1F22AAD2D5006D70FC /* CharTableCell.xib in Resources */,
+				7099AE2722B32FE700A6C29A /* welcome.gif in Resources */,
 				70BA8D0622A9802C006D70FC /* GoogleService-Info.plist in Resources */,
 				7099AE1822B0C6E200A6C29A /* AuthHeaderCollectionCell.xib in Resources */,
 				706F711022AF50DD0015169F /* Detail.storyboard in Resources */,
-				706F710D22AEC99B0015169F /* Assets.xcassets in Resources */,
+				7099AE2522B32FD500A6C29A /* Assets.xcassets in Resources */,
 				70AE457322A82CBE00271CDD /* SpellTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,6 +621,7 @@
 				70AE454322A6ABCF00271CDD /* Notification.swift in Sources */,
 				70AE453B22A5915100271CDD /* SpellViewModel.swift in Sources */,
 				7099AE2122B1A45700A6C29A /* UIImage.swift in Sources */,
+				7099AE2922B33A7100A6C29A /* TeamPickViewController.swift in Sources */,
 				70AE450F22A5903600271CDD /* FinalProject.xcdatamodeld in Sources */,
 				70BA8D0022A976AA006D70FC /* Utility.swift in Sources */,
 			);

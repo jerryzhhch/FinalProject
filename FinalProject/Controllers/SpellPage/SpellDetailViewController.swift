@@ -56,8 +56,11 @@ class SpellDetailViewController: UIViewController {
     // helping func
     func setupView() {
         titleLabel.text = spell.spell
-        typeLabel.attributedText = spell.type.makeBold(boldText: "Type:\n")
-        descriptionLabel.attributedText = spell.effect.makeBold(boldText: "Effect:\n")
+        
+        typeLabel.text = "Type:\n\(spell.type)"
+        
+        descriptionLabel.text = "Effect:\n\(spell.effect)"
+        
         learnedIcon.layer.cornerRadius = 15
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateView), name: Notification.Name.FireNotification, object: nil)

@@ -15,6 +15,18 @@ class HouseCollectionCell: UICollectionViewCell {
     
     @IBOutlet weak var houseImage: UIImageView!
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        layer.cornerRadius = 20
+    }
+    
+    override var isHighlighted: Bool {
+        didSet {
+            backgroundColor = isHighlighted ? .lightGray : UIColor(white: 0.7, alpha: 1)
+        }
+    }
+    
     func config(house: House) {
         houseImage.frame.size = self.frame.size
         houseImage.image = UIImage(named: house.name)
