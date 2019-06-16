@@ -20,6 +20,7 @@
 		7099AE2522B32FD500A6C29A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7099AE2422B32FD500A6C29A /* Assets.xcassets */; };
 		7099AE2722B32FE700A6C29A /* welcome.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7099AE2622B32FE700A6C29A /* welcome.gif */; };
 		7099AE2922B33A7100A6C29A /* TeamPickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AE2822B33A7100A6C29A /* TeamPickViewController.swift */; };
+		7099AE2B22B45E9A00A6C29A /* SortingHatResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7099AE2A22B45E9A00A6C29A /* SortingHatResultViewController.swift */; };
 		70AE450722A5903600271CDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AE450622A5903600271CDD /* AppDelegate.swift */; };
 		70AE450F22A5903600271CDD /* FinalProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 70AE450D22A5903600271CDD /* FinalProject.xcdatamodeld */; };
 		70AE451422A5903A00271CDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70AE451222A5903A00271CDD /* LaunchScreen.storyboard */; };
@@ -87,6 +88,7 @@
 		7099AE2422B32FD500A6C29A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7099AE2622B32FE700A6C29A /* welcome.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = welcome.gif; sourceTree = "<group>"; };
 		7099AE2822B33A7100A6C29A /* TeamPickViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPickViewController.swift; sourceTree = "<group>"; };
+		7099AE2A22B45E9A00A6C29A /* SortingHatResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortingHatResultViewController.swift; sourceTree = "<group>"; };
 		70AE450322A5903600271CDD /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70AE450622A5903600271CDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70AE450E22A5903600271CDD /* FinalProject.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FinalProject.xcdatamodel; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				70AE453E22A61E1700271CDD /* SotingHatViewController.swift */,
+				7099AE2A22B45E9A00A6C29A /* SortingHatResultViewController.swift */,
 			);
 			path = SortingHatPage;
 			sourceTree = "<group>";
@@ -585,6 +588,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7099AE2B22B45E9A00A6C29A /* SortingHatResultViewController.swift in Sources */,
 				70BA8D0922A98C98006D70FC /* FirebaseService.swift in Sources */,
 				70AE456D22A8224E00271CDD /* Spell.swift in Sources */,
 				70AE456722A6FF7D00271CDD /* HouseCollectionCell.swift in Sources */,

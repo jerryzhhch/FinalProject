@@ -38,32 +38,26 @@ class RegisterViewController: UIViewController {
         let age = getAge()
         let limit = calculateLimit(age: age)
         UserSettings.saveLimit(limit: limit)
-        
-        // save registration status
-        UserSettings.saveRegStatus(first: true)
-        
     }
     
     // helping func
     func setupView() {
         
     }
-
+    
     // get spell limit based on user's age
     func calculateLimit(age: Int) -> Int {
         switch age {
-        case _ where age > 0 && age <= 7:
-            return 0
         case _ where age > 7 && age <= 13:
-            return 2
+            return 1
         case _ where age > 13 && age <= 18:
-            return 5
+            return 2
         case _ where age > 18 && age <= 25:
-            return 7
+            return 3
         case _ where age > 25 && age <= 50:
-            return 10
+            return 5
         case _ where age > 50:
-            return 15
+            return 7
         default:
             return 0
         }

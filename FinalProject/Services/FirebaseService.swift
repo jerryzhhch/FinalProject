@@ -18,16 +18,19 @@ final class FirebaseService {
     static let shared = FirebaseService()
     private init() {}
     
-    lazy var spellRef = Database.database().reference(withPath: "spell")
-    
     // SAVE
     func save(spell: Spell) {
+        let rootRef = Database.database().reference(withPath: makeID())
+        let spellRef = rootRef.child("spell")
         spellRef.child(spell.spell).setValue(spell.toDictionary)
         print("Saved spell: ", spell.spell)
     }
     
     // LOAD
     func get(completion: @escaping SpellHandler) {
+        let rootRef = Database.database().reference(withPath: makeID())
+        let spellRef = rootRef.child("spell")
+        
         var spells = [Spell]()
         
         spellRef.observeSingleEvent(of: .value) {
@@ -45,8 +48,19 @@ final class FirebaseService {
     
     // DELETE
     func remove(spell: Spell) {
+        let rootRef = Database.database().reference(withPath: makeID())
+        let spellRef = rootRef.child("spell")
         spellRef.child(spell.spell).removeValue()
         print("Removed spell: ", spell.spell)
+    }
+    
+    // set Firebase database ID
+    func makeID() -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let myString = formatter.string(from: UserSettings.getBirth())
+        let id = UserSettings.getName() + myString
+        return id
     }
     
     

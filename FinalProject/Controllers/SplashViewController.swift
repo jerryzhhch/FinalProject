@@ -15,6 +15,7 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        test()
         
         if UserSettings.getRegStatus() {
             let viewController = _storyboard.instantiateViewController(withIdentifier: "RegisterViewController") as! RegisterViewController

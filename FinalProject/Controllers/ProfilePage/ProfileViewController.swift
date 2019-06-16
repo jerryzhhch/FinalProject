@@ -22,9 +22,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var classmatesTable: UITableView!
     @IBOutlet weak var imageButton: UIButton!
     
+    @IBOutlet weak var iconImage: UIImageView!
+    
     let fireModel = FireViewModel()
     let charModel = CharacterViewModel()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         charModel.getCharacters()
@@ -88,6 +90,18 @@ class ProfileViewController: UIViewController {
         dobLabel.text = "DOB: " + dobString
         houseLabel.text = "House: " + UserSettings.getHouse()
         
+        if UserSettings.getDeathEater() {
+            iconImage.image = UIImage(named: Constants.defaultImage.DeathEater.rawValue)
+        }
+        if UserSettings.getOrderOfThePhoenix() {
+            iconImage.image = UIImage(named: Constants.defaultImage.OrderOfThePhoenix.rawValue)
+        }
+        if UserSettings.getMinistryOfMagic() {
+            iconImage.image = UIImage(named: Constants.defaultImage.MinistryOfMagic.rawValue)
+        }
+        if UserSettings.getDumbledoresArmy() {
+            iconImage.image = UIImage(named: Constants.defaultImage.DumbledoresArmy.rawValue)
+        }
     }
     
     @objc func updateSpells() {
@@ -104,7 +118,7 @@ class ProfileViewController: UIViewController {
     
     // get classmates
     func getClassmates() -> [Character] {
-        let houseKey = "Gryffindor"//UserSettings.getHouse()
+        let houseKey = UserSettings.getHouse()
         guard let classmates = charModel.groupedCharByHouse[houseKey] else {
             return []
         }
@@ -195,7 +209,6 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
             goToDetail(nav: navigationController!, object: char, type: "character")
         }
     }
-    
     
     // editing spells
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

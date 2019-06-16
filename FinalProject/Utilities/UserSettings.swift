@@ -19,6 +19,10 @@ struct UserSettings {
         case firstRegistration = "first"
         case imageHash = "hash"
         case hasPassword = "password"
+        case ministryOfMagic = "ministry"
+        case orderOfThePhoenix = "phoenix"
+        case dumbledoresArmy = "DA"
+        case deathEater = "death"
     }
     
     // Setters
@@ -50,6 +54,22 @@ struct UserSettings {
         UserDefaults.standard.set(hasPassword, forKey: UserSettings.keys.hasPassword.rawValue)
     }
     
+    static func saveMinistryOfMagic(member: Bool) {
+        UserDefaults.standard.set(member, forKey: UserSettings.keys.ministryOfMagic.rawValue)
+    }
+    
+    static func saveOrderOfThePhoenix(member: Bool) {
+        UserDefaults.standard.set(member, forKey: UserSettings.keys.orderOfThePhoenix.rawValue)
+    }
+    
+    static func saveDumbledoresArmy(member: Bool) {
+        UserDefaults.standard.set(member, forKey: UserSettings.keys.dumbledoresArmy.rawValue)
+    }
+    
+    static func saveDeathEater(member: Bool) {
+        UserDefaults.standard.set(member, forKey: UserSettings.keys.deathEater.rawValue)
+    }
+    
     // Getters
     static func getHouse() -> String {
         return UserDefaults.standard.value(forKey: UserSettings.keys.house.rawValue) as? String ?? ""
@@ -69,11 +89,11 @@ struct UserSettings {
     }
     
     static func getLimit() -> Int {
-        return UserDefaults.standard.value(forKey: UserSettings.keys.limit.rawValue) as? Int ?? 3
+        return UserDefaults.standard.value(forKey: UserSettings.keys.limit.rawValue) as? Int ?? 0
     }
     
     static func getRegStatus() -> Bool {
-        return UserDefaults.standard.value(forKey: UserSettings.keys.firstRegistration.rawValue) as? Bool ?? false
+        return UserDefaults.standard.value(forKey: UserSettings.keys.firstRegistration.rawValue) as? Bool ?? true
     }
     
     static func getImageHash() -> String {
@@ -82,6 +102,22 @@ struct UserSettings {
     
     static func getHasPassword() -> Bool {
         return UserDefaults.standard.value(forKey: UserSettings.keys.hasPassword.rawValue) as? Bool ?? false
+    }
+    
+    static func getMinistryOfMagic() -> Bool {
+        return UserDefaults.standard.value(forKey: UserSettings.keys.ministryOfMagic.rawValue) as? Bool ?? false
+    }
+    
+    static func getOrderOfThePhoenix() -> Bool {
+        return UserDefaults.standard.value(forKey: UserSettings.keys.orderOfThePhoenix.rawValue) as? Bool ?? false
+    }
+    
+    static func getDumbledoresArmy() -> Bool {
+        return UserDefaults.standard.value(forKey: UserSettings.keys.dumbledoresArmy.rawValue) as? Bool ?? false
+    }
+    
+    static func getDeathEater() -> Bool {
+        return UserDefaults.standard.value(forKey: UserSettings.keys.deathEater.rawValue) as? Bool ?? false
     }
     
 }

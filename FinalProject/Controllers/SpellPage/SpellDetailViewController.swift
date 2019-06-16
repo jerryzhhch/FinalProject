@@ -35,7 +35,7 @@ class SpellDetailViewController: UIViewController {
     @IBAction func learnButtonTapped(_ sender: UIButton) {
         // No more than limits
         if fireModel.spells.count == UserSettings.getLimit() {
-            showAlert(title: "Whoops", message: "You can only learn five spells at this time")
+            showAlert(title: "Whoops", message: "You can only learn \(UserSettings.getLimit()) spells at this time")
         } else {
             fireService.save(spell: spell)
             DispatchQueue.main.async {

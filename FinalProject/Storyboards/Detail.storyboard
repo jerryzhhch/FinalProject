@@ -655,6 +655,15 @@
                                     <action selector="backButtonTapped:" destination="0mu-lI-4N7" eventType="touchUpInside" id="wPr-n4-XXI"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qMu-wS-QJ5">
+                                <rect key="frame" x="204" y="201" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="das-Fj-gVW">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="40"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="qMu-wS-QJ5" secondAttribute="height" multiplier="1:1" id="ttE-a9-TUn"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.65019184350000003" green="0.92268079520000001" blue="0.91026824709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -672,6 +681,9 @@
                             <constraint firstItem="WFZ-ZK-wKe" firstAttribute="top" secondItem="MPu-jt-h6c" secondAttribute="top" id="9hO-tV-pyM"/>
                             <constraint firstItem="rnE-J7-VU2" firstAttribute="height" secondItem="LNs-9s-uY0" secondAttribute="height" multiplier="0.3" id="Bse-LV-tae">
                                 <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="I1e-ws-aTa" firstAttribute="top" secondItem="qMu-wS-QJ5" secondAttribute="bottom" constant="30" id="Ce8-tY-Jkt">
+                                <variation key="heightClass=regular-widthClass=regular" constant="50"/>
                             </constraint>
                             <constraint firstItem="I1e-ws-aTa" firstAttribute="height" secondItem="LNs-9s-uY0" secondAttribute="height" multiplier="0.25" id="ERv-i1-TXu">
                                 <variation key="heightClass=regular-widthClass=regular" constant="0.0"/>
@@ -691,6 +703,9 @@
                             <constraint firstItem="LaO-Ni-Sda" firstAttribute="centerY" secondItem="gJp-76-6OS" secondAttribute="centerY" id="YeT-z9-H8Y"/>
                             <constraint firstItem="jFT-Xc-gjs" firstAttribute="centerX" secondItem="gJp-76-6OS" secondAttribute="centerX" id="bXh-Ma-Dgb"/>
                             <constraint firstItem="I1e-ws-aTa" firstAttribute="leading" secondItem="MPu-jt-h6c" secondAttribute="leading" id="dmV-TV-3qJ"/>
+                            <constraint firstItem="qMu-wS-QJ5" firstAttribute="leading" secondItem="gJp-76-6OS" secondAttribute="trailing" constant="30" id="gCK-Yw-zaB">
+                                <variation key="heightClass=regular-widthClass=regular" constant="60"/>
+                            </constraint>
                             <constraint firstItem="MPu-jt-h6c" firstAttribute="top" secondItem="5OK-cd-Lra" secondAttribute="top" id="hXd-Gn-jhr"/>
                             <constraint firstItem="5OK-cd-Lra" firstAttribute="leading" secondItem="WFZ-ZK-wKe" secondAttribute="trailing" id="iIT-zL-cqs"/>
                             <constraint firstItem="MPu-jt-h6c" firstAttribute="trailing" secondItem="I1e-ws-aTa" secondAttribute="trailing" id="sJS-tC-cr8"/>
@@ -702,6 +717,7 @@
                         <outlet property="classmatesTable" destination="rnE-J7-VU2" id="ewu-Lc-9Kg"/>
                         <outlet property="dobLabel" destination="ViX-1Z-QcW" id="ysE-xS-WvT"/>
                         <outlet property="houseLabel" destination="n1M-BW-1Z5" id="xTH-0l-w3a"/>
+                        <outlet property="iconImage" destination="qMu-wS-QJ5" id="t2r-fl-kV2"/>
                         <outlet property="imageButton" destination="jFT-Xc-gjs" id="dio-Rz-imj"/>
                         <outlet property="nameLabel" destination="6ZF-m7-RK6" id="tFK-7z-TD1"/>
                         <outlet property="profileImage" destination="gJp-76-6OS" id="d9i-XH-bfu"/>
@@ -710,7 +726,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QQk-m4-fOn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1481" y="1316"/>
+            <point key="canvasLocation" x="1480.8" y="1315.5922038980511"/>
         </scene>
         <!--Map-->
         <scene sceneID="Vnb-oM-HMf">
@@ -742,10 +758,52 @@
             </objects>
             <point key="canvasLocation" x="2345" y="1316"/>
         </scene>
+        <!--Sorting Hat Result View Controller-->
+        <scene sceneID="maj-ax-Uzk">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aac-uf-1eI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="SortingHatResultViewController" id="6rc-B9-6YD" customClass="SortingHatResultViewController" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.59999999999999998" contentMode="scaleToFill" id="dXr-A2-Qeg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YcN-5R-Hqn">
+                                <rect key="frame" x="94" y="175" width="187.5" height="317"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YcN-5R-Hqn" secondAttribute="height" multiplier="13:22" id="F7O-Fn-tuw"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GryffindorFlag" translatesAutoresizingMaskIntoConstraints="NO" id="jbo-eI-spm">
+                                <rect key="frame" x="131.5" y="232.5" width="112.5" height="202.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jbo-eI-spm" secondAttribute="height" multiplier="5:9" id="Gzq-gZ-C0b"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jbo-eI-spm" firstAttribute="width" secondItem="YcN-5R-Hqn" secondAttribute="width" multiplier="0.6" id="OMZ-4z-3eh"/>
+                            <constraint firstItem="YcN-5R-Hqn" firstAttribute="centerY" secondItem="dXr-A2-Qeg" secondAttribute="centerY" id="aua-Fw-rxW"/>
+                            <constraint firstItem="YcN-5R-Hqn" firstAttribute="centerX" secondItem="dXr-A2-Qeg" secondAttribute="centerX" id="dmb-w6-crX"/>
+                            <constraint firstItem="jbo-eI-spm" firstAttribute="centerY" secondItem="dXr-A2-Qeg" secondAttribute="centerY" id="ib5-lD-yfh"/>
+                            <constraint firstItem="YcN-5R-Hqn" firstAttribute="width" secondItem="dXr-A2-Qeg" secondAttribute="width" multiplier="0.5" id="rJ4-6h-TXl"/>
+                            <constraint firstItem="jbo-eI-spm" firstAttribute="centerX" secondItem="dXr-A2-Qeg" secondAttribute="centerX" id="wuR-MF-nxm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sj9-Kb-uh3"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultImage" destination="jbo-eI-spm" id="ZB2-DA-H4q"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="3222" y="1316"/>
+        </scene>
     </scenes>
     <resources>
         <image name="CharBackground" width="720" height="500"/>
         <image name="ForgetButton" width="225" height="225"/>
+        <image name="GryffindorFlag" width="411" height="679"/>
         <image name="LearnButton" width="225" height="225"/>
         <image name="ProfilePlaceholder" width="1280" height="960"/>
         <image name="backButton" width="512" height="512"/>

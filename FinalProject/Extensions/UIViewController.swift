@@ -26,7 +26,6 @@ extension UIViewController {
         let userDate = UserSettings.getBirth()
         let dobYear = Int(calendar.component(.year, from: userDate))
         print("birth year: ", dobYear)
-        
         return currentYear - dobYear
     }
     
@@ -36,12 +35,18 @@ extension UIViewController {
         // go to Character detail page
         case "character":
             let detailVC = storyboard.instantiateViewController(withIdentifier: "CharDetailViewController") as! CharDetailViewController
-            detailVC.character = object as! Character
+            guard let ob = object as? Character else {
+                return
+            }
+            detailVC.character = ob
             navigationController?.pushViewController(detailVC, animated: true)
         // go to Spell detail page
         case "spell":
             let detailVC = storyboard.instantiateViewController(withIdentifier: "SpellDetailViewController") as! SpellDetailViewController
-            detailVC.spell = object as! Spell
+            guard let ob = object as? Spell else {
+                return
+            }
+            detailVC.spell = ob
             navigationController?.pushViewController(detailVC, animated: true)
         default:
             break
@@ -77,6 +82,10 @@ extension UIViewController {
         print("New user: ", UserSettings.getRegStatus())
         print("House: ", UserSettings.getHouse())
         print("Spell limit: ", UserSettings.getLimit())
+        print("DA :", UserSettings.getDumbledoresArmy())
+        print("Ministry :", UserSettings.getMinistryOfMagic())
+        print("Orger :", UserSettings.getOrderOfThePhoenix())
+        print("Death :", UserSettings.getDeathEater())
         print("----------------")
     }
 }

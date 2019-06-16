@@ -19,13 +19,6 @@ struct Constants {
         case characters = "characters"
     }
     
-    enum houseID: String {
-        case Gryffindor = "5a05e2b252f721a3cf2ea33f"
-        case Ravenclaw = "5a05da69d45bd0a11bd5e06f"
-        case Hufflepuff = "5a05dc58d45bd0a11bd5e070"
-        case Slytherin = "5a05dc8cd45bd0a11bd5e071"
-    }
-    
     enum houseName: String {
         case Gryffindor
         case Ravenclaw

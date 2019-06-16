@@ -31,12 +31,15 @@ class SotingHatViewController: UIViewController {
         guard let randomHouse = houses.randomElement() else {
             return
         }
-        print("random house: ", randomHouse)
         if getAge() < 7 {
             showAlert(title: nil, message: "Kid, you are too young to learn magic.\nWe will invite you when you are seven.")
         }
         if UserSettings.getHouse().isEmpty {
             UserSettings.saveHouse(house: randomHouse)
+            let storyboard = UIStoryboard(name: "Detail", bundle: .main)
+            let vc = storyboard.instantiateViewController(withIdentifier: "SortingHatResultViewController") as! SortingHatResultViewController
+            vc.house = randomHouse
+            present(vc, animated: true, completion: nil)
         } else {
             showAlert(title: nil, message: "You've already joined a House")
         }
